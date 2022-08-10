@@ -1,0 +1,170 @@
+@font-face {
+  src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
+    format("woff2");
+  font-family: "Meta";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.container {
+  width: 100wv;
+  height: 100vh;
+  display: flex;
+}
+
+.left{
+  flex: 3;
+  background: #000;
+}
+
+.left div{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left div p:nth-child(1){
+  color: transparent;
+  -webkit-text-stroke: 2px ;
+}
+
+.right{
+  flex: 1;
+  background: #fff;
+  font-family: Poppins;
+}
+
+.right p {
+  font-size: 1.05rem;
+  letter-spacing: 1.1px;
+}
+
+.textOptions{
+  margin: 1.5rem auto;
+}
+
+.text, .font, .size{
+  width: 100%;
+  margin-bottom: 1.6rem;
+}
+
+.text input{
+  padding: 2px 8px;
+}
+
+.text input, 
+.family select, 
+.color input, 
+.size input, 
+.animationType select, 
+.animationColor input{
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid rgb(200, 200, 200);
+}
+
+.family select, .animationType select{
+  padding: 2px 4px;
+}
+
+.font{
+  display: flex;
+}
+
+.family{
+  width: 45%;
+  margin-right: 2rem;
+}
+
+.color{
+  width: 45%;
+}
+
+.size{
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.effect{
+  margin-top: 2.5rem;
+}
+
+.effect div{
+  margin-bottom: 1.5rem;
+}
+
+.TextEffect p{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.animation{
+  display: flex;
+  justify-content: space-between;
+}
+
+.animationType, .animationColor{
+  width: 45%;
+}
+
+.water{
+  position: absolute;
+  align-items: center;
+  animation: animate 4s ease-in infinite ;
+}
+
+.line{
+  transition: all 0.5s;
+  -webkit-text-stroke: 4px #d6f4f4;
+  font-variation-settings: "wght" 900, "ital" 1;
+  color: transparent;
+  font-family: "Meta", sans-serif;
+  text-shadow: 10px 10px 0px #07bccc,
+    15px 15px 0px #e601c0,
+    20px 20px 0px #e9019a,
+    25px 25px 0px #f40468,
+    45px 45px 10px #482896;
+  cursor: pointer;
+}
+
+.line:hover{
+  font-variation-settings: "wght" 100, "ital" 0;
+  text-shadow: none;
+}
+.flickering{
+  color: #fff;
+  font-size: 100px;
+}
+
+
+@keyframes animate {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 45%,
+			16% 44%,
+			33% 50%,
+			54% 60%,
+			70% 61%,
+			84% 59%,
+			100% 52%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+	50% {
+		clip-path: polygon(
+			0% 60%,
+			15% 65%,
+			34% 66%,
+			51% 62%,
+			67% 50%,
+			84% 45%,
+			100% 46%,
+			100% 100%,
+			0% 100%
+		);
+	}
+}
